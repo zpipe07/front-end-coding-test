@@ -1,4 +1,6 @@
 # Test 1
+Click here to go to the rendered view of the first test: [Test 1](../example1.html)
+
 The files for this test live in the `example1` folder and contains the following assets:
 - `example1.js`: This is the custom JS file for this test.
 - `example1.md`: This is the guide you're reading right now.  No need to edit this.
@@ -31,4 +33,3 @@ The files for this test live in the `example1` folder and contains the following
 * Add an on-click event that toggles the card front-to-back via the button at the bottom of the card.  Use the existing frame in the `example1.js` file.
 
 ## Ready? Set? [Go!](../example1.html)
-Click here to go to the rendered view of the first test: [Test 1](../example1.html)

@@ -10,17 +10,17 @@
                 <header class="test-band-header">
                     {% block band_header %}{% endblock %}
                 </header>
-        {% endif %}
-        {% if has_body %}
+            {% endif %}
+            {% if has_body %}
                 <div class="test-band-content">
                     {% block band_body %}{% endblock %}
                 </div>
             {% endif %}
-        {% if has_footer %}
-        <footer class="test-band-footer">
+            {% if has_footer %}
+                <footer class="test-band-footer">
                     {% block band_footer %}{% endblock %}
+                </footer>
+            {% endif %}
         </div>
-        {% endif %}
-    </footer>
     </section>
 {%- endif -%}

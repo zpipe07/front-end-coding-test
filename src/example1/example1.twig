@@ -7,27 +7,39 @@
 
 {% block content %}
 	{% embed "../library/layouts/_band.twig" %}
-	
+
 		{% block band_header %}
 			{% include "../library/components/_header.twig" with {
 				"title": data.header.title,
 				"headline": data.header.headline
 			} only %}
 		{% endblock %}
-		
+
 		{% block band_body %}
 			{% for card in data.cards %}
+				{% if card|length > 1 %}
+					<div class="flip__container" data-test-flip-on>
+						<div class="flip__flipper">
+				{% else %}
+					<div>
+				{% endif %}
 				{% for side in card %}
 					{% include "../library/layouts/_card.twig" with side only %}
 				{% endfor %}
+				{% if card|length > 1 %}
+						</div>
+					</div>
+				{% else %}
+					<div>
+				{% endif %}
 			{% endfor %}
 		{% endblock %}
-	
+
 		{% block band_footer %}
 			{% include "../library/components/_copy.twig" with {
 				"content": data.footer.content
 			} only %}
 		{% endblock %}
-	
+
 	{% endembed %}
 {% endblock %}
